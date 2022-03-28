@@ -32,6 +32,7 @@ export class MainPageComponent {
       nombre: '',
       poder: 0
     }
+    console.log(this.nuevo);
   }
 
 }

@@ -4,37 +4,36 @@
 <div class="row">
   <div class="col">
 
-    <h3>Personajes</h3>
-    <hr>
-    <ul>
-      <li>Krimlim - 700</li>
-      <li>Goku - 15 000</li>
-      <li>Vegetta - 8 500</li>
-    </ul>
+    <app-personajes [personajes]="personajes" >
+
+    </app-personajes>
+<!--
+     -->
+
   </div>
 
   <div class="col">
-    <h3>Agregar <small>{{nuevo.nombre}} </small> </h3>
+    <h3>Agregar <small>{{ nuevo.nombre }} </small> </h3>
 
     <hr>
 
     <form (ngSubmit)="agregar()">
-      <input 
-        type="text" 
+      <input
+        type="text"
         placeholder="Nombre de personaje"
         name="nombre"
-        [(ngModel)]="nuevo.nombre" 
+        [(ngModel)]="nuevo.nombre"
         >
 
-        <!--  
+        <!--
           una forma de hacer one way data binding
-          [value]="nuevo.nombre" 
-          (input)="cambiarNombre( $event ) 
+          [value]="nuevo.nombre"
+          (input)="cambiarNombre( $event )
         -->
 
-      <input 
-        type="number" 
-        placeholder="Poder" 
+      <input
+        type="number"
+        placeholder="Poder"
         name="poder"
         [(ngModel)]="nuevo.poder">
 
